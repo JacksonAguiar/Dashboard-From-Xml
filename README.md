@@ -44,6 +44,16 @@ npm run dev
  ```
 4. Acesse a aplicação em seu navegador em `http://localhost:5173`.
 
+### Executando com Docker
+1. Execute o comando docker compose:
+```
+docker-compose up
+```
+2. Para parar os serviços
+```
+docker-compose down
+```
+
 ## Uso
 
 1. Faça upload do seu arquivo XML contendo dados de métricas usando o botão de upload fornecido.
