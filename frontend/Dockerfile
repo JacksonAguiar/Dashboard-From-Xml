@@ -10,6 +10,8 @@ RUN npm install
 
 COPY frontend/ .
 
+ENV VITE_APP_BACKEND="http://localhost:3000"
+
 RUN npm run build
 
 EXPOSE 8080

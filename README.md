@@ -34,15 +34,16 @@ npm run start
 ```
 cd frontend
  ```
-2. Instale as dependências:
+2. Em ".env" descomente a variavel "VITE_APP_BACKEND" e salve
+3. Instale as dependências:
  ```
 npm install
  ```
-3. Inicie o servidor de desenvolvimento do Vue.js:
+4. Inicie o servidor de desenvolvimento do Vue.js:
  ```
 npm run dev
  ```
-4. Acesse a aplicação em seu navegador em `http://localhost:5173`.
+5. Acesse a aplicação em seu navegador em `http://localhost:5173`.
 
 ### Executando com Docker
 1. Execute o comando docker compose:
