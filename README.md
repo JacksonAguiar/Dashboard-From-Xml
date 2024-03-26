@@ -47,9 +47,10 @@ npm run dev
 ### Executando com Docker
 1. Execute o comando docker compose:
 ```
-docker-compose up
+docker-compose up --build
 ```
-2. Para parar os serviços
+2. Acesse a aplicação em seu navegador em `http://localhost:8080`.
+3. Para parar os serviços
 ```
 docker-compose down
 ```

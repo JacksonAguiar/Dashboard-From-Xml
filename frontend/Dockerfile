@@ -1,13 +1,17 @@
-FROM node:14
+FROM node:16
 
 WORKDIR /app/frontend
+
+RUN npm install -g http-server
 
 COPY frontend/package*.json ./
 
 RUN npm install
 
-COPY frontend/ ./
+COPY frontend/ .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD [ "npm", "run", "dev" ]
+EXPOSE 8080
+
+CMD [ "http-server", "dist" ]
