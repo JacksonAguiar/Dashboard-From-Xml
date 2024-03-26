@@ -10,7 +10,7 @@ const service = new MetricsService();
 let data = ref<{}>();
 let isNew = ref<boolean>(false);
 
-const processDatFromApi = (response: any) => {
+const processDataFromApi = (response: any) => {
   response.futureIncome = formatCurrency(response.futureIncome);
   response.ltv = formatCurrency(response.ltv);
 
@@ -23,7 +23,9 @@ onMounted(async () => {
     let response = resp?.data;
 
     if (!!response) {
-      processDatFromApi(response);
+      console.log("chegou aqui")
+      console.log(response);
+      processDataFromApi(response);
     } else {
       isNew.value = true;
     }
@@ -41,7 +43,7 @@ const onSubmit = async (ref: any) => {
 
   const resp = await service.UploadFile(file);
   let response = resp?.data;
-  processDatFromApi(response);
+  processDataFromApi(response);
 
   isNew.value = false;
 }

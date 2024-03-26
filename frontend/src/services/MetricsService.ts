@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default class MetricsService {
-  URL: string = "http://localhost:3000/metrics";
+  URL: string = `${import.meta.env.VITE_APP_BACKEND}/metrics`;
 
   async UploadFile(file: any) {
     const formData = new FormData();
